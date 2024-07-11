@@ -1,0 +1,56 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.newsletter{
+    margin-top: 40px;
+
+    .contenido-newsletter{
+        @include m.grid(2,40px);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        background-image: url("../../img/newsletter.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        
+
+        .texto-newsletter{
+            grid-column: 2/3;
+            background-color: v.$blanco;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            margin: -10px;
+
+            
+            h2,p{
+                margin-bottom: 20px;
+            }
+            .formulario{
+                display: flex;
+                flex-direction: column;
+
+                .input{
+                    width: 100%;
+                    padding: 15px;
+                    border: solid 1px v.$borde;
+                }
+                .btn{
+                    background-color: v.$azul;
+                    border: none;
+                    padding: 15px;
+                    color: v.$blanco;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
